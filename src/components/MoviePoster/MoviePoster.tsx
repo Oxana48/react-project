@@ -1,3 +1,4 @@
+import { placeholder } from "../../utils/genreImages";
 import "./MoviePoster.css";
 
 interface MoviePosterProps {
@@ -27,7 +28,7 @@ const MoviePoster: React.FC<MoviePosterProps> = ({
         src={posterUrl || "/poster-holder.jpg"}
         alt={title || "Movie poster"}
         onError={(e) => {
-          e.currentTarget.src = "src/assets/poster-placeholder.jpg";
+          e.currentTarget.src = placeholder;
         }}
       />
     </div>

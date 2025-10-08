@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchMovieByGenre } from "../../api/Movie";
 import { Link } from "react-router-dom";
 import { capitalizedGenreName } from "../../utils/genreUtils";
-import { genreImages } from "../../utils/genreImages";
+import { genreImages, placeholder } from "../../utils/genreImages";
 import "./GenrePage.css";
 
 const GenrePage = () => {
@@ -18,7 +18,7 @@ const GenrePage = () => {
     queryGenre.data?.map((genre) => ({
       ...genre,
       name: capitalizedGenreName(genre.name),
-      image: genreImages[genre.name.toLowerCase()] || "src/assets/poster-placeholder.jpg",
+      image: genreImages[genre.name.toLowerCase()] || placeholder,
     })) || [];
 
   return (
@@ -37,7 +37,7 @@ const GenrePage = () => {
                 src={genre.image}
                 alt={genre.name}
                 onError={(e) => {
-                  e.currentTarget.src = "src/assets/poster-placeholder.jpg";
+                  e.currentTarget.src = placeholder;
                 }}
               />
               <div className="genres__overlay">
