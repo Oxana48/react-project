@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
+# MovieApp - Кино-гид с персональными рекомендациями
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для поиска фильмов, управления избранным и получения персонализированных рекомендаций. Пользователи могут регистрироваться, добавлять фильмы в избранное и просматривать детальную информацию о кинокартинах.
 
-Currently, two official plugins are available:
+![Скриншот проекта](./screenshot.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Технологии
 
-## Expanding the ESLint configuration
+- **React** (функциональные компоненты, хуки)
+- **typeScript** (статическая типизация)
+- **React Router v6** (навигация между страницами)
+- **Redux Toolkit** (управление состоянием приложения)
+- **React Query** (кэширование и управление сетверным состоянием)
+- **Zod** (валидация схем данных)
+- **CSS Modules** (изолированные стили компонентов)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Ключевые особенности
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Функциональность**:
+  - Поиск фильмомв
+  - Детальная информация о фильме
+  - Навигация по жанрам
+  - Топ 10 лучших фильмов
+  - Избранные фильмы
+  - Управление данными в профиле пользователя
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Интерактивный интерфейс**:
+  - Адаптивный дизайн
+  - Лениая загрузка
+  - Интуитивная навигация
+  - Мгновенное добавление/удаление в профиле
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Запуск проекта
+
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/Oxana48/react-project
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Установите зависимости:
+```bash
+git install
 ```
+
+3. Запустите проект:
+```bash
+npm run dev
+```
+
+Приложение будет доступно по адресу http://localhost:5173
