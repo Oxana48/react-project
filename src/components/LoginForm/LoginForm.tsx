@@ -64,6 +64,7 @@ const LoginForm: FC<LoginFormProps> = ({onClose}) => {
           console.log(mes);
           setServerError(str);
         } catch (e) {
+          console.error('Ошибка парсинга JSON ответа:', e);
           setServerError("Неверная почта или пароль");
         }
       },
