@@ -1,0 +1,42 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+}
+
+.form-field__error-text {
+  color: var(--error);
+  font-size: 12px;
+}
+
+.form-field > input {
+  padding: 16px 16px 16px 52px;
+  font-size: 18px;
+  color: var(--black);
+  border: 1px solid var(--text-input);
+  border-radius: 8px;
+}
+
+.form-field:focus-within > input {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+.form-field:focus-within .register-form__icon path {
+  fill: var(--border-focus);
+}
+
+.form-field--error > input {
+  border-color: var(--error);
+}
+
+.form-field--error:focus-within > input {
+  border-color: var(--error);
+}
+
+.form-field--error .register-form__icon path {
+  fill: var(--error);
+}

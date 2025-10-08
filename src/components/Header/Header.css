@@ -1,0 +1,137 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.header__middle {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  font-size: 24px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.header__main,
+.header__genres,
+.header__profile-user {
+  text-decoration: none;
+  color: var(--text-primary);
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.header__profile-user {
+  font-size: 24px;
+}
+
+.header__link--active {
+  border-bottom-color: var(--border-bottom);
+}
+
+.header__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--layout);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.header__logo {
+  width: 143px;
+  height: 32px;
+}
+
+.header__button {
+  background-color: transparent;
+  color: var(--text-light);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header__desktop {
+  display: block;
+}
+
+.header__mobile {
+  display: none;
+}
+
+.header__genres-link,
+.header__search-link,
+.header__profile-link {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.header__genres-link:hover,
+.header__search-link:hover,
+.header__profile-link:hover {
+  stroke: var(--text-light);
+}
+
+.header__mobile-search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--layout);
+  z-index: 1000;
+}
+
+@media (max-width: 1085px) {
+  .header__main {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .header__desktop {
+    display: none;
+  }
+
+  .header__mobile {
+    display: block;
+  }
+
+  .header__container {
+    display: none;
+  }
+
+  .header__svg-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+
+  .header__svg-left {
+    display: flex;
+    justify-content: start;
+    align-items: self-start;
+  }
+
+  .header__mobile-right {
+    display: flex;
+  }
+}
